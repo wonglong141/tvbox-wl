@@ -233,6 +233,11 @@ def scan_interfaces():
             print(f"  跳过 {json_file.name}: {e}")
             continue
 
+        # 容错：顶层可能是数组/标量（如 潇洒.json），直接跳过，避免 data.get 崩溃
+        if not isinstance(data, dict):
+            print(f"  跳过 {json_file.name}: 顶层非对象(JSON数组或标量)，无法提取 lives")
+            continue
+
         lives = data.get("lives", [])
         if not isinstance(lives, list):
             continue
