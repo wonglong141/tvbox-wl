@@ -1,0 +1,45 @@
+name: 同步上游仓库
+
+# 作用：每天自动把原作者 lubin776/tvbox-api-backup 的最新抓取结果
+#       （含更新后的 tvbox/*.json）合并进本 fork。
+#       合并后 tvbox/** 变化 → 触发 gen-all.yml 重建 all.json
+#       → 触发 Cloudflare Pages 自动重新部署，实现内容自动更新。
+
+on:
+  schedule:
+    # UTC 12:00 = 北京时间当天 20:00，每天傍晚同步一次
+    - cron: '0 12 * * *'
+  workflow_dispatch:   # 也支持在 Actions 页面手动点 "Run workflow" 立即同步
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出本仓库
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 配置 Git 身份
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: 合并上游更新
+        run: |
+          # 添加原作者仓库为 upstream（本仓库的上游）
+          git remote add upstream https://github.com/lubin776/tvbox-api-backup.git || true
+          git fetch upstream main
+
+          # 合并上游 main 到本仓库 main。
+          # -X theirs：遇到冲突时优先采用上游版本，保证同步不卡住。
+          # 本 fork 自己新增的文件（all.json / gen_all.py / gen-all.yml 等）
+          # 上游没有，不会被覆盖，会保留下来。
+          git merge upstream/main --no-edit -X theirs || true
+
+          # 推回本仓库 main（若无变化，push 自然无内容，无害）
+          git push origin main || true
