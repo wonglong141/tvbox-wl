@@ -410,7 +410,7 @@ ls ry/ tvbox/ tvbox/live/ list.txt SUMMARY.txt livelist.txt
 本站接口资源由【误道者】整理。所有资源均来自互联网，版权归原作者所有。仅供测试学习使用，请勿用于违法及商业用途，请勿付费购买。如涉及侵权，请联系删除。
 
 · QQ 交流群：1067685939
-· Telegram 群组：https://t.me/+nrWtFerPAfcwOTg9
+· Telegram 群组：https://t.me/tg6603
 
 ---
 
