@@ -1,6 +1,12 @@
 {
   "lives": [
     {
+      "name": "Guovin",
+      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+      "ua": "",
+      "source": "更新专用接口"
+    },
+    {
       "name": "Kimentanm",
       "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "ua": "",
@@ -37,64 +43,10 @@
       "source": "饭太硬"
     },
     {
-      "name": "Guovin",
-      "url": "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
-      "ua": "",
-      "source": "菠菜pro"
-    },
-    {
-      "name": "幸福年年zb",
-      "url": "http://150.158.52.248/tgyg/lib/ylzb.txt",
-      "ua": "",
-      "source": "幸福年年"
-    },
-    {
-      "name": "☀轮播直播",
-      "url": "http://150.158.52.248/tgyg/lib/dsj.txt",
-      "ua": "",
-      "source": "幸福年年"
-    },
-    {
-      "name": "💖2500部恐怖片",
-      "url": "http://150.158.52.248/tgyg/lib/电影.txt",
-      "ua": "",
-      "source": "幸福年年"
-    },
-    {
-      "name": "🐅虎牙一起看",
-      "url": "http://150.158.52.248/tgyg/lib/huyayqk.m3u",
-      "ua": "okHttp/Mod-1.5.0.0",
-      "source": "幸福年年"
-    },
-    {
-      "name": "🐟斗鱼一起看",
-      "url": "http://150.158.52.248/tgyg/lib/douyuyqk.m3u",
-      "ua": "okHttp/Mod-1.5.0.0",
-      "source": "幸福年年"
-    },
-    {
-      "name": "🅱️B站直播",
-      "url": "http://150.158.52.248/tgyg/lib/bililive.m3u",
-      "ua": "okHttp/Mod-1.5.0.0",
-      "source": "幸福年年"
-    },
-    {
-      "name": "🍊YY轮播",
-      "url": "http://150.158.52.248/tgyg/lib/yylunbo.m3u",
-      "ua": "okHttp/Mod-1.5.0.0",
-      "source": "幸福年年"
-    },
-    {
-      "name": "🍊短剧直播",
-      "url": "http://150.158.52.248/tgyg/lib/dj.txt",
-      "ua": "",
-      "source": "幸福年年"
-    },
-    {
-      "name": "💖天微③",
-      "url": "http://150.158.52.248/tgyg/lib/kjtwzb.txt",
-      "ua": "okhttp/3",
-      "source": "幸福年年"
+      "name": "Yoursmile",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
+      "ua": "okhttp/3.15",
+      "source": "南风"
     },
     {
       "name": "Kimentanm1线",
@@ -107,12 +59,6 @@
       "url": "https://sub.ottiptv.cc/bililive.m3u",
       "ua": "okHttp/Mod-1.5.0.0",
       "source": "嗷呜"
-    },
-    {
-      "name": "Yoursmile",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/yoursmile66/TVBox/main/live.txt",
-      "ua": "okhttp/3.15",
-      "source": "南风"
     }
   ]
 }
